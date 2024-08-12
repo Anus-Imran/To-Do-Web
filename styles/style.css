@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bolder;
+}
+
+body {
+    background-color: #003459;
+    max-height: 100%;
+    min-height: 100vh;
+}
+
+.navbar {
+    background-color: #023e8a;
+}
+
+.form_box {
+    margin-top: 30px;
+    padding: 30px;
+    border: 1px solid #023e8a;
+    box-shadow: 0px 0px 10px 5px #004f87;
+    /*box-shadow: offsetX offsetY blurRadius spreadRadius color;*/
+}
+
+.output-box {
+    border: 1px solid white;
+    min-height: 100px;
+    max-height: 1000px;
+    width: 10px;
+}
+
+.table_box {
+    background-color: #003459;
+    border: 1px solid white;
+    color: white;
+    text-align: center;
+}
+
+.table_head {
+    background-color: #023e8a;
+    color: aqua;
+}
+
+.runTimeMsgsShow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.runTimeMsgsShow p {
+    color: white;
+    font-size: 20px;
+}
+
+#dlt,
+#edit {
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid #003459;
+    background-color: #003459;
+    color: aqua;
+    margin-right: 5px;
+    transition: background-color 0.3s linear;
+}
+
+#edit:hover {
+    background: transparent;
+}
+
+#dlt:hover {
+    background: transparent;
+}
+
+.footer {
+    height: 25px;
+    margin-top: 50px;
+    /* background-color: #004f87; */
+    border-radius: 5px;
+}
+
+/* ============================================================== */
+
+.taskBox {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #004f87;
+    color: white;
+    max-width: 90%;
+}
+
+h3 {
+    margin-bottom: 20px;
+}
+
+.task-detail {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.task-title {
+    flex: 1;
+    /* make the title take up one part of the space*/
+    font-weight: bold;
+    border-right: 2px solid white;
+    padding-right: 10px;
+}
+
+.task-info {
+    flex: 2;
+    /*make the info take up two parts of the space*/
+    padding-left: 10px;
+}
+
+.task-detail span {
+    white-space: wrap;
+    /*prevents text from wrapping*/
+}
+
+/* ==================================================================== */
+
+@media (max-width : 768px) {
+    .runTimeMsgsShow p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    #noTaskMsg {
+        font-size: 15px;
+    }
+
+    .taskBox {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+}
+
+@media (max-width : 585px) {
+    .form_box {
+        margin: 0px 10px 0px 10px;
+    }
+
+    #dlt,
+    #edit {
+        width: 70px;
+    }
+
+    .runTimeMsgsShow p {
+        font-size: 13px;
+    }
+
+    #noTaskMsg {
+        font-size: 13px;
+    }
+}
+
+@media (max-width : 490px) {
+
+    #dlt,
+    #edit {
+        width: 60px;
+        font-size: 15px;
+        margin-right: 3px;
+        margin-bottom: 5px;
+    }
+
+    .task-title {
+        flex: 1.5;
+    }
+
+    .task-info {
+        flex: 1.5;
+    }
+}

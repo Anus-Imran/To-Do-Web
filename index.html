@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TODO List Web App</title>
+
+  <!-- bootstrap style CDN  -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+
+  <!-- custome CSS file linked  -->
+
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+
+<body>
+  <!-- header section start -->
+
+  <header>
+
+    <!-- navbar -->
+
+    <nav class="navbar navbar-expand-lg" id="navbar">
+      <div class="container">
+        <a class="navbar-brand text-light" href="#">My TODO List</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2 shadow-none" id="search" type="search" placeholder="Search By Title"
+              aria-label="Search" />
+            <button class="btn btn-outline-info" id="searchBtn" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- navbar end  -->
+
+  </header>
+
+  <!-- header section end  -->
+
+  <h2 class="text-center text-light mt-3">Add Your Task</h2>
+  <div class="container runTimeMsgsShow">
+    <p id="greetingMsg"></p>
+    <p id="time"></p>
+  </div>
+
+  <!-- main section start  -->
+
+  <main class="container">
+
+    <!-- form start  -->
+
+    <form class="row g-3 form_box mb-8">
+      <div class="col-md-6">
+        <label for="inputTitle4" class="form-label text-light">Title</label>
+        <input type="text" class="form-control" id="title" placeholder="Enter Title / Task ..." />
+      </div>
+      <div class="col-md-6">
+        <label for="inputLocation4" class="form-label text-light">Location</label>
+        <input type="text" class="form-control" id="location" placeholder="Enter Location ..." />
+      </div>
+      <div class="col-12">
+        <label for="inputDescription" class="form-label text-light">Description</label>
+        <input type="text" class="form-control" id="description" placeholder="Enter Task Description ..." />
+      </div>
+
+      <!-- form buttons -->
+
+      <div class="text-center">
+        <button type="submit" class="submitButton btn btn-outline-info " id="addTaskBtn">Add Your Task</button>
+        <button type="submit" class="submitButton btn btn-outline-info" style="display: none;" id="updateTaskBtn">Update
+          Your Task</button>
+      </div>
+    </form>
+
+    <!-- form end  -->
+
+
+    <!--output Box start-->
+    <h2 class="text-center text-light mt-3">Your Tasks</h2>
+    <div class="row g-3 form_box output" id="outputTasks">
+      <!-- <table class="table_box">
+          <thead class="table_box">
+            <tr>
+              <th scope="col" class="table_head">#</th>
+              <th scope="col" class="table_head">First</th>
+              <th scope="col" class="table_head">Last</th>
+              <th scope="col" class="table_head">Handle</th>
+            </tr>
+          </thead>
+          <tbody class="table_box">
+            <tr class="table_box">
+              <th scope="row" class="table_head">1</th>
+              <td class="table_box">Mark</td>
+              <td class="table_box">Otto</td>
+              <td class="table_box">@mdo</td>
+            </tr>
+            <tr class="table_box">
+              <th scope="row" class="table_head">2</th>
+              <td class="table_box">Jacob</td>
+              <td class="table_box">Thornton</td>
+              <td class="table_box">@fat</td>
+            </tr>
+            <tr class="table_box">
+              <th scope="row" class="table_head">3</th>
+              <td class="table_box" colspan="2">Larry the Bird</td>
+              <td class="table_box">@twitter</td>
+            </tr>
+          </tbody>
+        </table> -->
+    </div>
+  </main>
+
+  <!-- main sectiond end  -->
+
+
+  <!-- footer section start  -->
+
+  <footer class="footer text-center text-light" id="footer">
+    <p>&copy; <span class="year"></span> . All Rights Reserved .</p>
+  </footer>
+
+  <!-- footer section end  -->
+
+  <!-- dayJs library CDN  -->
+
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+
+  <!-- bootstrap script CDN  -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- custom JS file linked  -->
+
+  <script src="Js/index.js"></script>
+
+</body>
+
+</html>
